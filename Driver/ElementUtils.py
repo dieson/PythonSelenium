@@ -19,4 +19,12 @@ class ElementUtils(FindElement):
             assert False
 
     def clear(self, locator, elementName):
-        
+        element = self.find_element(locator)
+        try:
+            element.clear()
+            print "[Successful] Clear the " + elementName
+        except Exception as e:
+            self.screenshot(elementName)
+            print "[Fail] Unable to Clear the " + elementName
+            print e
+            assert False
