@@ -9,12 +9,9 @@ from Utils.Util import Util
 
 
 class DriverUtils(Driver):
-    def __init__(self):
-        super(DriverUtils, self).__init__()
-
-    def sleep(self):
+    def sleep(self, secound):
         try:
-            time.sleep(1)
+            time.sleep(secound)
         except Exception as e:
             print e
 

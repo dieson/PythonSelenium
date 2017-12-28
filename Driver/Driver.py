@@ -10,7 +10,6 @@ from Utils.Util import Util
 class Driver(object):
     def __init__(self):
         self.chromedriver = os.path.join(Util.get_project_path(), "Resources", "chromedriver.exe")
-        print self.chromedriver
         self.driver = webdriver.Chrome(self.chromedriver)
         self.driver.maximize_window()
 
