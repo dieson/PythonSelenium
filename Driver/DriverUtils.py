@@ -5,7 +5,7 @@
 import os
 import time
 from Driver import Driver
-from Utils.Util import Util
+from Utils.Utils import Utils
 
 
 class DriverUtils(Driver):
@@ -16,7 +16,7 @@ class DriverUtils(Driver):
             print e
 
     def screenshot(self, image):
-        imagepath = os.path.join(Util.get_project_path(), "Screenshot", image + ".png")
+        imagepath = os.path.join(Utils.get_project_path(), "Screenshot", image + ".png")
         try:
             self.driver.save_screenshot(imagepath)
             print imagepath

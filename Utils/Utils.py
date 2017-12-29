@@ -1,11 +1,11 @@
 # encoding=utf-8
 # @Time    : 2017/12/26 17:32
 # @Author  : Zuo Ran
-# @File    : Util.py
+# @File    : Utils.py
 import os
 
 
-class Util(object):
+class Utils(object):
     # 获取当前项目路径
     @staticmethod
     def get_project_path():

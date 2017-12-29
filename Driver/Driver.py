@@ -4,14 +4,15 @@
 # @File    : Driver.py
 import os
 from selenium import webdriver
-from Utils.Util import Util
+from Utils.Utils import Utils
 
 
 class Driver(object):
-    def __init__(self):
-        self.chromedriver = os.path.join(Util.get_project_path(), "Resources", "chromedriver.exe")
+    def __init__(self, url):
+        self.chromedriver = os.path.join(Utils.get_project_path(), "Resources", "chromedriver.exe")
         self.driver = webdriver.Chrome(self.chromedriver)
         self.driver.maximize_window()
+        self.driver.get(url)
 
     def quit(self):
         try:
@@ -25,5 +26,3 @@ class Driver(object):
     def get_driver(self):
         return self.driver
 
-    def open(self, url):
-        self.driver.get(url)

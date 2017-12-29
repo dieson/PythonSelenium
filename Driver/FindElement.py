@@ -3,13 +3,13 @@
 # @Author  : Zuo Ran
 # @File    : FindElement.py
 from DriverUtils import DriverUtils
-from Utils.Util import Util
+from Utils.Utils import Utils
 
 
 class FindElement(DriverUtils):
     def find_element(self, locator):
-        locatorType = Util.get_locator_type(locator)
-        locatorStr = Util.get_locator_str(locator)
+        locatorType = Utils.get_locator_type(locator)
+        locatorStr = Utils.get_locator_str(locator)
         element = None
 
         try:
@@ -34,8 +34,8 @@ class FindElement(DriverUtils):
         return element
 
     def find_elements(self, locator):
-        locatorType = Util.get_locator_type(locator)
-        locatorStr = Util.get_locator_str(locator)
+        locatorType = Utils.get_locator_type(locator)
+        locatorStr = Utils.get_locator_str(locator)
         elements = None
 
         try:
