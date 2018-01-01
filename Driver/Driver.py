@@ -3,13 +3,18 @@
 # @Author  : Zuo Ran
 # @File    : Driver.py
 import os
+import platform
 from selenium import webdriver
 from Utils.Utils import Utils
 
 
 class Driver(object):
     def __init__(self, url):
-        self.chromedriver = os.path.join(Utils.get_project_path(), "Resources", "chromedriver.exe")
+        self.chromedriver = None
+        if "Win" in platform.system():
+            self.chromedriver = os.path.join(Utils.get_project_path(), "Resources", "chromedriver.exe")
+        else:
+            self.chromedriver = os.path.join(Utils.get_project_path(), "Resources", "chromedriver")
         self.driver = webdriver.Chrome(self.chromedriver)
         self.driver.maximize_window()
         self.driver.get(url)
