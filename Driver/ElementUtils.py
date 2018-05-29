@@ -9,7 +9,7 @@ class ElementUtils(FindElement):
     def input(self, locator, value, elementName):
         element = self.find_element(locator)
         try:
-            element.clear()
+            # element.clear()
             element.send_keys(value)
             print "[Successful] " + elementName + " input:" + value
         except Exception as e:
@@ -35,7 +35,7 @@ class ElementUtils(FindElement):
             print "[Successful] Click the " + elementName
         except Exception as e:
             self.screenshot(elementName)
-            print "[Fail] Unable to click"
+            print "[Fail] Unable to click the" + elementName
             print e
             assert False
 
@@ -64,12 +64,21 @@ class ElementUtils(FindElement):
 
     def is_displayed(self, locator, elementName):
         is_displayed = False
+        exist = self.exist_element(locator)
+        if exist:
+            print "[Successful] The " + elementName + " is displayed"
+            is_displayed = True
+        else:
+            print "[Successful] The " + elementName + " is not displayed"
+        return is_displayed
+
+    def is_checked(self, locator, isCheck, elementName):
         try:
-            is_displayed = self.find_element(locator).is_displayed()
-            print "[Successful] The element is displayed"
+            is_checked = self.find_element(locator).get_attribute("value")
+            if is_checked != isCheck:
+                self.find_element(locator).click()
+                print "[Successful] Swicth the " + elementName
         except Exception as e:
             self.screenshot(elementName)
-            print "[Fail] The element is displayed"
+            print "[Fail] Swicth the " + elementName
             print e
-            assert False
-        return is_displayed

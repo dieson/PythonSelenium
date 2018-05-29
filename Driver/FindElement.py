@@ -7,54 +7,81 @@ from Utils.Utils import Utils
 
 
 class FindElement(DriverUtils):
+    def find_elements(self, locator):
+        self.wait(self.wait_time)
+        locator_type = Utils.get_locator_type(locator)
+        locator_str = Utils.get_locator_str(locator)
+        elements = None
+
+        try:
+            if locator_type == "XPATH":
+                elements = self.driver.find_element_by_xpath(locator_str)
+            elif locator_type == "ID":
+                elements = self.driver.find_element_by_id(locator_str)
+            elif locator_type == "CLASS":
+                elements = self.driver.find_element_by_class_name(locator_str)
+            elif locator_type == "TAGNAME":
+                elements = self.driver.find_element_by_tag_name(locator_str)
+            elif locator_type == "LINKTEXT":
+                elements = self.driver.find_element_by_link_text(locator_str)
+            elif locator_type == "NAME":
+                elements = self.driver.find_element_by_name(locator_str)
+            elif locator_type == "CSS":
+                elements = self.driver.find_element_by_css_selector(locator_str)
+            print "[Successful] Find the element"
+        except Exception as e:
+            print "[Fail] Unable get the element"
+            print e
+        return elements
+
     def find_element(self, locator):
-        locatorType = Utils.get_locator_type(locator)
-        locatorStr = Utils.get_locator_str(locator)
+        self.wait(self.wait_time)
+        locator_type = Utils.get_locator_type(locator)
+        locator_str = Utils.get_locator_str(locator)
         element = None
 
         try:
-            if locatorType == "XPATH":
-                element = self.driver.find_element_by_xpath(locatorStr)
-            elif locatorType == "ID":
-                element = self.driver.find_element_by_id(locatorStr)
-            elif locatorType == "CLASS":
-                element = self.driver.find_element_by_class_name(locatorStr)
-            elif locatorType == "TAGNAME":
-                element = self.driver.find_element_by_tag_name(locatorStr)
-            elif locatorType == "LINKTEXT":
-                element = self.driver.find_element_by_link_text(locatorStr)
-            elif locatorType == "NAME":
-                element = self.driver.find_element_by_name(locatorStr)
-            elif locatorType == "CSS":
-                element = self.driver.find_element_by_css_selector(locatorStr)
+            if locator_type == "XPATH":
+                element = self.driver.find_element_by_xpath(locator_str)
+            elif locator_type == "ID":
+                element = self.driver.find_element_by_id(locator_str)
+            elif locator_type == "CLASS":
+                element = self.driver.find_element_by_class_name(locator_str)
+            elif locator_type == "TAGNAME":
+                element = self.driver.find_element_by_tag_name(locator_str)
+            elif locator_type == "LINKTEXT":
+                element = self.driver.find_element_by_link_text(locator_str)
+            elif locator_type == "NAME":
+                element = self.driver.find_element_by_name(locator_str)
+            elif locator_type == "CSS":
+                element = self.driver.find_element_by_css_selector(locator_str)
             print "[Successful] Find the element"
         except Exception as e:
             print "[Fail] Unable get the element"
             print e
         return element
 
-    def find_elements(self, locator):
-        locatorType = Utils.get_locator_type(locator)
-        locatorStr = Utils.get_locator_str(locator)
-        elements = None
+    def exist_element(self, locator):
+        self.wait(self.wait_time)
+        locator_type = Utils.get_locator_type(locator)
+        locator_str = Utils.get_locator_str(locator)
 
         try:
-            if locatorType == "XPATH":
-                elements = self.driver.find_element_by_xpath(locatorStr)
-            elif locatorType == "ID":
-                elements = self.driver.find_element_by_id(locatorStr)
-            elif locatorType == "CLASS":
-                elements = self.driver.find_element_by_class_name(locatorStr)
-            elif locatorType == "TAGNAME":
-                elements = self.driver.find_element_by_tag_name(locatorStr)
-            elif locatorType == "LINKTEXT":
-                elements = self.driver.find_element_by_link_text(locatorStr)
-            elif locatorType == "NAME":
-                elements = self.driver.find_element_by_name(locatorStr)
-            elif locatorType == "CSS":
-                elements = self.driver.find_element_by_css_selector(locatorStr)
+            if locator_type == "XPATH":
+                self.driver.find_element_by_xpath(locator_str)
+            elif locator_type == "ID":
+                self.driver.find_element_by_id(locator_str)
+            elif locator_type == "CLASS":
+                self.driver.find_element_by_class_name(locator_str)
+            elif locator_type == "TAGNAME":
+                self.driver.find_element_by_tag_name(locator_str)
+            elif locator_type == "LINKTEXT":
+                self.driver.find_element_by_link_text(locator_str)
+            elif locator_type == "NAME":
+                self.driver.find_element_by_name(locator_str)
+            elif locator_type == "CSS":
+                self.driver.find_element_by_css_selector(locator_str)
             print "[Successful] Find the element"
-        except Exception as e:
-            print "[Fail] Unable get the element"
-            print e
-        return elements
+            return True
+        except Exception:
+            return False

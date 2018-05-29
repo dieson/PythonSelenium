@@ -3,21 +3,19 @@
 # @Author  : Zuo Ran
 # @File    : Driver.py
 import os
-import platform
 from selenium import webdriver
 from Utils.Utils import Utils
+from Utils.PropertyUtils import PropertyUtils
 
 
 class Driver(object):
-    def __init__(self, url):
-        self.chromedriver = None
-        if "Win" in platform.system():
-            self.chromedriver = os.path.join(Utils.get_project_path(), "Resources", "chromedriver.exe")
-        else:
-            self.chromedriver = os.path.join(Utils.get_project_path(), "Resources", "chromedriver")
-        self.driver = webdriver.Chrome(self.chromedriver)
+    def __init__(self):
+        self.wait_time = PropertyUtils.get_conf().get("script", "wait_time")
+        self.url = PropertyUtils.get_conf().get("serverconf", "server_url")
+        self.chromeDriver = os.path.join(Utils.get_project_path(), "Resources", "chromedriver.exe")
+        self.driver = webdriver.Chrome(self.chromeDriver)
         self.driver.maximize_window()
-        self.driver.get(url)
+        self.driver.get(self.url)
 
     def quit(self):
         try:
@@ -30,4 +28,5 @@ class Driver(object):
 
     def get_driver(self):
         return self.driver
+
 

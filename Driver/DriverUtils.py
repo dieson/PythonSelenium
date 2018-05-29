@@ -9,7 +9,10 @@ from Utils.Utils import Utils
 
 
 class DriverUtils(Driver):
-    def sleep(self, secound):
+    def wait(self, secound):
+        if type(secound) is not int:
+            secound = int(secound)
+
         try:
             time.sleep(secound)
         except Exception as e:
@@ -66,3 +69,7 @@ class DriverUtils(Driver):
             print "[Fail] Unable get text"
             print e
         return text
+
+    def switch_window(self):
+        self.driver.switch_to_window(self.driver.current_window_handle)
+        print "[Successful] Switch to window"
