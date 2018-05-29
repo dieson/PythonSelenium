@@ -5,13 +5,12 @@
 import os
 from selenium import webdriver
 from Utils.Utils import Utils
-from Utils.PropertyUtils import PropertyUtils
 
 
 class Driver(object):
     def __init__(self):
-        self.wait_time = PropertyUtils.get_conf().get("script", "wait_time")
-        self.url = PropertyUtils.get_conf().get("serverconf", "server_url")
+        self.wait_time = Utils.get_conf("script", "wait_time")
+        self.url = Utils.get_conf("serverconf", "server_url")
         self.chromeDriver = os.path.join(Utils.get_project_path(), "Resources", "chromedriver.exe")
         self.driver = webdriver.Chrome(self.chromeDriver)
         self.driver.maximize_window()

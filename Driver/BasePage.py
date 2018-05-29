@@ -3,9 +3,21 @@
 # @Author  : Zuo Ran
 # @File    : NeoCUUtils.py
 from ElementUtils import ElementUtils
+from Utils.Utils import Utils
 
 
 class BasePage(ElementUtils):
+    def login_neocu(self):
+        username = Utils.get_conf("serverconf", "username")
+        password = Utils.get_conf("serverconf", "password")
+        self.close_notification()
+        self.input("NAME:username", username, "UserName")
+        self.input("NAME:password", password, "Password")
+        self.click("CSS:.ult-btn.ult-btn-primary.ult-btn-medium", "LoginButton")
+
+        self.wait_logo()
+        self.switch_window()
+
     def quit_neocu(self):
         print "Logout"
 

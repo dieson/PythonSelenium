@@ -6,7 +6,6 @@ import unittest
 import ddt
 from Driver.BasePage import BasePage
 from ModulePages.ExternalModule import ExternalModule
-from ModulePages.LoginModule import LoginModule
 from Utils.ExcelDriver import ExcelDriver
 
 
@@ -18,10 +17,7 @@ class ExternalTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.driver = BasePage()
-
-        login = LoginModule(cls.driver)
-        login.login()
-        cls.driver.switch_window()
+        cls.driver.login_neocu()
 
     @ddt.data(*excel.next())
     def test_create_external_network(self, data):

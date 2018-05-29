@@ -4,7 +4,6 @@
 # @File    : PropertyUtils.py
 import os
 from Utils import Utils
-import configparser as cparser
 
 
 class PropertyUtils(object):
@@ -30,18 +29,3 @@ class PropertyUtils(object):
         except Exception as e:
             print e
         return value
-
-    # 获取config.ini
-    @staticmethod
-    def get_conf():
-        return PropertyUtils.get_file("Resources", "config.ini")
-
-    # 获取property文件
-    @staticmethod
-    def get_file(*path):
-        file_path = Utils.get_project_path()
-        for value in path:
-            file_path = os.path.join(file_path, value)
-        cf = cparser.ConfigParser()
-        cf.read(file_path)
-        return cf

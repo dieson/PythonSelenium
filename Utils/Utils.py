@@ -3,6 +3,7 @@
 # @Author  : Zuo Ran
 # @File    : Utils.py
 import os
+import configparser as cparser
 
 
 class Utils(object):
@@ -51,3 +52,22 @@ class Utils(object):
         else:
             print "[Fail] Unable get locator string"
             return locator
+
+    # 获取config.ini
+    @staticmethod
+    def get_conf(section, key):
+        try:
+            data = Utils.get_file("Resources", "config.ini")
+            return data.get(section, key)
+        except Exception as e:
+            print e
+
+    # 获取property文件
+    @staticmethod
+    def get_file(*path):
+        file_path = Utils.get_project_path()
+        for value in path:
+            file_path = os.path.join(file_path, value)
+        cf = cparser.ConfigParser()
+        cf.read(file_path)
+        return cf

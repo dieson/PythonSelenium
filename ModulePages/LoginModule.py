@@ -3,6 +3,7 @@
 # @Author  : Zuo Ran
 # @File    : LoginModule.py
 from Utils.PropertyUtils import PropertyUtils
+from Utils.Utils import Utils
 
 
 class LoginModule(object):
@@ -16,8 +17,8 @@ class LoginModule(object):
         self.driver = driver_utils
 
     def login(self):
-        username = PropertyUtils.get_conf().get("serverconf", "username")
-        password = PropertyUtils.get_conf().get("serverconf", "password")
+        username = Utils.get_conf("serverconf", "username")
+        password = Utils.get_conf("serverconf", "password")
         self.driver.close_notification()
         self.driver.input(self.__username, username, "UserName")
         self.driver.input(self.__password, password, "Password")
