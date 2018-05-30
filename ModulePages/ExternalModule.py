@@ -2,12 +2,12 @@
 # @Time    : 2018/3/13 15:13
 # @Author  : Zuo Ran
 # @File    : ExternalModule.py
-
+import os
 from Utils.PropertyUtils import PropertyUtils
 
 
 class ExternalModule(object):
-    __EXTERNAL = PropertyUtils("ExternalPage.properties")
+    __EXTERNAL = PropertyUtils(os.path.join("InspectPages", "ExternalPage.ini"))
 
     __network = __EXTERNAL.get("NETWORK")
     __external = __EXTERNAL.get("EXTERNAL")

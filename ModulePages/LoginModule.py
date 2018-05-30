@@ -2,12 +2,13 @@
 # @Time    : 2018/3/15 14:58
 # @Author  : Zuo Ran
 # @File    : LoginModule.py
+import os
 from Utils.PropertyUtils import PropertyUtils
 from Utils.Utils import Utils
 
 
 class LoginModule(object):
-    __LOGIN = PropertyUtils("LoginPage.properties")
+    __LOGIN = PropertyUtils(os.path.join("InspectPages", "LoginPage.ini"))
 
     __username = __LOGIN.get("USERNAME")
     __password = __LOGIN.get("PASSWORD")

@@ -8,7 +8,7 @@ from Utils import Utils
 
 class PropertyUtils(object):
     def __init__(self, file_name):
-        self.file_path = os.path.join(Utils.get_project_path(), "InspectPages", file_name)
+        self.file_path = os.path.join(Utils.get_project_path(), file_name)
         self.properties = {}
         try:
             fopen = open(self.file_path, 'r')
