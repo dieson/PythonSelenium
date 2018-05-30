@@ -6,12 +6,12 @@ import unittest
 import ddt
 from Driver.BasePage import BasePage
 from ModulePages.ExternalModule import ExternalModule
-from Utils.ExcelDriver import ExcelDriver
+from Utils.ExcelUtils import ExcelUtils
 
 
 @ddt.ddt
 class ExternalTest(unittest.TestCase):
-    excel = ExcelDriver("ExternalData.xlsx", "External")
+    excel = ExcelUtils("ExternalData.xlsx", "External")
     driver = None
 
     @classmethod

@@ -4,14 +4,14 @@
 # @File    : LoginTest.py
 import unittest
 import ddt
-from Utils.ExcelDriver import ExcelDriver
+from Utils.ExcelUtils import ExcelUtils
 from Driver.BasePage import BasePage
 from ModulePages.LoginModule import LoginModule
 
 
 @ddt.ddt
 class LoginTest(unittest.TestCase):
-    excel = ExcelDriver("Login.xlsx", "Login")
+    excel = ExcelUtils("Login.xlsx", "Login")
     driver = None
     login = None
 
