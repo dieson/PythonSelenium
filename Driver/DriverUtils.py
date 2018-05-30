@@ -71,5 +71,11 @@ class DriverUtils(Driver):
         return text
 
     def switch_window(self):
-        self.driver.switch_to_window(self.driver.current_window_handle)
-        self.logger.log_successful("Switch to window")
+        try:
+            handle = self.driver.current_window_handle
+            self.driver.switch_to_window(handle)
+            self.logger.log_successful("Switch to window")
+        except Exception as e:
+            self.screenshot("Alert")
+            self.logger.log_error("Unable switch to window")
+            self.logger.log_exception(e)
