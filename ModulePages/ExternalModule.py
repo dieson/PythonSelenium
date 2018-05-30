@@ -19,6 +19,7 @@ class ExternalModule(object):
     __inSubnet = __EXTERNAL.get("INSUBNET")
     __addSubnet = __EXTERNAL.get("ADDSUBNET")
     __subnetName = __EXTERNAL.get("SUBNETNAME")
+    __subnetSegment = __EXTERNAL.get("SUBNETSEGMENT")
     __submitSubnet = __EXTERNAL.get("SUBMITSUBNET")
     __submitButton = __EXTERNAL.get("SUBMITBUTTON")
 
@@ -31,4 +32,8 @@ class ExternalModule(object):
         self.driver.click(self.__create, "CREATE")
         self.driver.input(self.__name, data["name"], "NAME")
         # self.driver.is_checked(self.__share, data["share"], "SHARE")
+        self.driver.click(self.__addSubnet, "ADDSUBNET")
+        self.driver.input(self.__subnetName, data["subnet_name"], "SUBNETNAME")
+        self.driver.input(self.__subnetSegment, data["subnet_segment"], "SUBNETSEGMENT")
+        self.driver.click(self.__submitSubnet, "SUBMITSUBNET")
         self.driver.click(self.__submitButton, "SUBMITBUTTON")
