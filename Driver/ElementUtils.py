@@ -82,3 +82,14 @@ class ElementUtils(FindElement):
             self.screenshot(elementName)
             self.logger.log_error("Swicth the " + elementName)
             self.logger.log_exception(e)
+
+    def is_existed(self, locator, elementName):
+        try:
+            if self.exist_element(locator):
+                self.logger.log_successful(elementName + "is existed")
+            else:
+                self.logger.log_successful(elementName + "is not existed")
+        except Exception as e:
+            self.screenshot(elementName)
+            self.logger.log_error(elementName + "is existed ")
+            self.logger.log_exception(e)
