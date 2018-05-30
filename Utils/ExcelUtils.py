@@ -1,13 +1,13 @@
 # encoding=utf-8
 # @Time    : 2017/12/29 14:09
 # @Author  : Zuo Ran
-# @File    : ExcelDriver.py
+# @File    : ExcelUtils.py
 import os
 import xlrd
 from Utils import Utils
 
 
-class ExcelDriver(object):
+class ExcelUtils(object):
     def __init__(self, excel_name, sheet_name):
         self.file_path = os.path.join(Utils.get_project_path(), "TestData", excel_name)
         self.data = xlrd.open_workbook(self.file_path)
