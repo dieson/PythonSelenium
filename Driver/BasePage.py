@@ -19,7 +19,7 @@ class BasePage(ElementUtils):
         self.switch_window()
 
     def quit_neocu(self):
-        print "Logout"
+        self.logger.log_info("Logout")
 
         logged = self.exist_element("CSS:div.ult-usernav-toggle")
         if logged:
@@ -28,7 +28,7 @@ class BasePage(ElementUtils):
         self.quit()
 
     def wait_logo(self):
-        print "Wait for the login successful"
+        self.logger.log_info("Wait for the login successful")
 
         i = 0
         while self.exist_element("CSS:.login-board") is True:

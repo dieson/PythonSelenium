@@ -3,13 +3,15 @@
 # @Author  : Zuo Ran
 # @File    : Driver.py
 import os
+import platform
 from selenium import webdriver
 from Utils.Utils import Utils
-import platform
+from Utils.LoggerUtils import LoggerUtils
 
 
 class Driver(object):
     def __init__(self):
+        self.logger = LoggerUtils()
         self.wait_time = Utils.get_conf("script", "wait_time")
         self.url = Utils.get_conf("serverconf", "server_url")
         if "Win" in platform.system():
@@ -23,10 +25,10 @@ class Driver(object):
     def quit(self):
         try:
             self.driver.quit()
-            print "[Successful] Quit the app"
+            self.logger.log_successful("Quit the app")
         except Exception as e:
-            print "[Fail] Quit the app"
-            print e
+            self.logger.log_error("Quit the app")
+            self.logger.log_exception(e)
             assert False
 
     def get_driver(self):

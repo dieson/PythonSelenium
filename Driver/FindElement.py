@@ -28,10 +28,10 @@ class FindElement(DriverUtils):
                 elements = self.driver.find_element_by_name(locator_str)
             elif locator_type == "CSS":
                 elements = self.driver.find_element_by_css_selector(locator_str)
-            print "[Successful] Find the element"
+            self.logger.log_successful("Find the elements")
         except Exception as e:
-            print "[Fail] Unable get the element"
-            print e
+            self.logger.log_error("Unable get the elements")
+            self.logger.log_exception(e)
         return elements
 
     def find_element(self, locator):
@@ -55,10 +55,10 @@ class FindElement(DriverUtils):
                 element = self.driver.find_element_by_name(locator_str)
             elif locator_type == "CSS":
                 element = self.driver.find_element_by_css_selector(locator_str)
-            print "[Successful] Find the element"
+                self.logger.log_successful("Find the element")
         except Exception as e:
-            print "[Fail] Unable get the element"
-            print e
+            self.logger.log_error("Unable get the element")
+            self.logger.log_exception(e)
         return element
 
     def exist_element(self, locator):
@@ -81,7 +81,6 @@ class FindElement(DriverUtils):
                 self.driver.find_element_by_name(locator_str)
             elif locator_type == "CSS":
                 self.driver.find_element_by_css_selector(locator_str)
-            print "[Successful] Find the element"
             return True
         except Exception:
             return False

@@ -11,54 +11,54 @@ class ElementUtils(FindElement):
         try:
             # element.clear()
             element.send_keys(value)
-            print "[Successful] " + elementName + " input:" + value
+            self.logger.log_successful(elementName + " input:" + value)
         except Exception as e:
             self.screenshot(elementName)
-            print "[Fail] Unable to input"
-            print e
+            self.logger.log_error("Unable to input")
+            self.logger.log_exception(e)
             assert False
 
     def clear(self, locator, elementName):
         element = self.find_element(locator)
         try:
             element.clear()
-            print "[Successful] Clear the " + elementName
+            self.logger.log_successful("Clear the " + elementName)
         except Exception as e:
             self.screenshot(elementName)
-            print "[Fail] Unable to Clear the " + elementName
-            print e
+            self.logger.log_error("Unable to Clear the " + elementName)
+            self.logger.log_exception(e)
             assert False
 
     def click(self, locator, elementName):
         try:
             self.find_element(locator).click()
-            print "[Successful] Click the " + elementName
+            self.logger.log_successful("Click the " + elementName)
         except Exception as e:
             self.screenshot(elementName)
-            print "[Fail] Unable to click the" + elementName
-            print e
+            self.logger.log_error("Unable to click the " + elementName)
+            self.logger.log_exception(e)
             assert False
 
     def select(self, locator, value, elementName):
         element = self.find_element(locator)
         try:
             element.select_by_visible_text(value)
-            print "[Successful] Select the " + value
+            self.logger.log_successful("Select the " + value)
         except Exception as e:
             self.screenshot(elementName)
-            print "[Fail] Unable to select"
-            print e
+            self.logger.log_error("[Fail] Unable to select ")
+            self.logger.log_exception(e)
             assert False
 
     def get_text(self, locator, elementName):
         msg = None
         try:
             msg = self.find_element(locator).text()
-            print "[Successful] Get the " + elementName
+            self.logger.log_successful("Get the " + elementName)
         except Exception as e:
             self.screenshot(elementName)
-            print "[Fail] Get attribute failure"
-            print e
+            self.logger.log_error("Get attribute failure ")
+            self.logger.log_exception(e)
             assert False
         return msg
 
@@ -66,10 +66,10 @@ class ElementUtils(FindElement):
         is_displayed = False
         exist = self.exist_element(locator)
         if exist:
-            print "[Successful] The " + elementName + " is displayed"
+            self.logger.log_successful("The " + elementName + " is displayed ")
             is_displayed = True
         else:
-            print "[Successful] The " + elementName + " is not displayed"
+            self.logger.log_error("The " + elementName + " is not displayed ")
         return is_displayed
 
     def is_checked(self, locator, isCheck, elementName):
@@ -77,8 +77,8 @@ class ElementUtils(FindElement):
             is_checked = self.find_element(locator).get_attribute("value")
             if is_checked != isCheck:
                 self.find_element(locator).click()
-                print "[Successful] Swicth the " + elementName
+                self.logger.log_successful("Swicth the " + elementName)
         except Exception as e:
             self.screenshot(elementName)
-            print "[Fail] Swicth the " + elementName
-            print e
+            self.logger.log_error("Swicth the " + elementName)
+            self.logger.log_exception(e)

@@ -1,0 +1,120 @@
+'Wed, 30 May 2018 17:10:13' test INFO: [Successful] UserName input:admin
+'Wed, 30 May 2018 17:10:14' test INFO: [Successful] Password input:passw0rd
+'Wed, 30 May 2018 17:10:15' test INFO: [Successful] Find the element
+'Wed, 30 May 2018 17:10:15' test INFO: [Successful] Click the LoginButton
+'Wed, 30 May 2018 17:10:15' test INFO: Wait for the login successful
+'Wed, 30 May 2018 17:10:16' test INFO: [Successful] Switch to window
+'Wed, 30 May 2018 17:10:18' test ERROR: [Fail] Unable get the element
+'Wed, 30 May 2018 17:10:18' test ERROR: Message: invalid selector: Unable to locate an element with the xpath expression //div[contains(@class,'ult-layout-sider')]/ul/li[5]1 because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//div[contains(@class,'ult-layout-sider')]/ul/li[5]1' is not a valid XPath expression.
+  (Session info: chrome=66.0.3359.139)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.16299 x86_64)
+Traceback (most recent call last):
+  File "D:\Code\PythonSelenium\Driver\FindElement.py", line 45, in find_element
+    element = self.driver.find_element_by_xpath(locator_str)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 368, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 858, in find_element
+    'value': value})['value']
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 311, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //div[contains(@class,'ult-layout-sider')]/ul/li[5]1 because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//div[contains(@class,'ult-layout-sider')]/ul/li[5]1' is not a valid XPath expression.
+  (Session info: chrome=66.0.3359.139)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.16299 x86_64)
+
+'Wed, 30 May 2018 17:10:18' test INFO: D:\Code\PythonSelenium\Screenshot\NETWORK.png
+'Wed, 30 May 2018 17:10:18' test ERROR: [Fail] Unable to click the NETWORK
+'Wed, 30 May 2018 17:10:18' test ERROR: 'NoneType' object has no attribute 'click'
+Traceback (most recent call last):
+  File "D:\Code\PythonSelenium\Driver\ElementUtils.py", line 34, in click
+    self.find_element(locator).click()
+AttributeError: 'NoneType' object has no attribute 'click'
+'Wed, 30 May 2018 17:10:18' test INFO: Logout
+'Wed, 30 May 2018 17:10:20' test INFO: [Successful] Find the element
+'Wed, 30 May 2018 17:10:20' test INFO: [Successful] Click the USER NAVIGATION
+'Wed, 30 May 2018 17:10:21' test INFO: [Successful] Find the element
+'Wed, 30 May 2018 17:10:22' test INFO: [Successful] Click the LOGOUT
+'Wed, 30 May 2018 17:10:25' test INFO: [Successful] Quit the app
+'Wed, 30 May 2018 17:11:24' test INFO: [Successful] UserName input:admin
+'Wed, 30 May 2018 17:11:25' test INFO: [Successful] Password input:passw0rd
+'Wed, 30 May 2018 17:11:26' test INFO: [Successful] Find the element
+'Wed, 30 May 2018 17:11:26' test INFO: [Successful] Click the LoginButton
+'Wed, 30 May 2018 17:11:26' test INFO: Wait for the login successful
+'Wed, 30 May 2018 17:11:27' test INFO: [Successful] Switch to window
+'Wed, 30 May 2018 17:11:28' test ERROR: [Fail] Unable get the element
+'Wed, 30 May 2018 17:11:28' test ERROR: Message: invalid selector: Unable to locate an element with the xpath expression //div[contains(@class,'ult-layout-sider')]/ul/li[5]1 because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//div[contains(@class,'ult-layout-sider')]/ul/li[5]1' is not a valid XPath expression.
+  (Session info: chrome=66.0.3359.139)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.16299 x86_64)
+Traceback (most recent call last):
+  File "D:\Code\PythonSelenium\Driver\FindElement.py", line 45, in find_element
+    element = self.driver.find_element_by_xpath(locator_str)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 368, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 858, in find_element
+    'value': value})['value']
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 311, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //div[contains(@class,'ult-layout-sider')]/ul/li[5]1 because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//div[contains(@class,'ult-layout-sider')]/ul/li[5]1' is not a valid XPath expression.
+  (Session info: chrome=66.0.3359.139)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.16299 x86_64)
+
+'Wed, 30 May 2018 17:11:29' test INFO: D:\Code\PythonSelenium\Screenshot\NETWORK.png
+'Wed, 30 May 2018 17:11:29' test ERROR: [Fail] Unable to click the NETWORK
+'Wed, 30 May 2018 17:11:29' test ERROR: 'NoneType' object has no attribute 'click'
+Traceback (most recent call last):
+  File "D:\Code\PythonSelenium\Driver\ElementUtils.py", line 34, in click
+    self.find_element(locator).click()
+AttributeError: 'NoneType' object has no attribute 'click'
+'Wed, 30 May 2018 17:11:29' test INFO: Logout
+'Wed, 30 May 2018 17:11:31' test INFO: [Successful] Find the element
+'Wed, 30 May 2018 17:11:31' test INFO: [Successful] Click the USER NAVIGATION
+'Wed, 30 May 2018 17:11:32' test INFO: [Successful] Find the element
+'Wed, 30 May 2018 17:11:33' test INFO: [Successful] Click the LOGOUT
+'Wed, 30 May 2018 17:11:36' test INFO: [Successful] Quit the app
+'Wed, 30 May 2018 17:13:50' test INFO: [Successful] UserName input:admin
+'Wed, 30 May 2018 17:13:51' test INFO: [Successful] Password input:passw0rd
+'Wed, 30 May 2018 17:13:52' test INFO: [Successful] Find the element
+'Wed, 30 May 2018 17:13:52' test INFO: [Successful] Click the LoginButton
+'Wed, 30 May 2018 17:13:52' test INFO: Wait for the login successful
+'Wed, 30 May 2018 17:13:54' test INFO: [Successful] Switch to window
+'Wed, 30 May 2018 17:13:55' test ERROR: [Fail] Unable get the element
+'Wed, 30 May 2018 17:13:55' test ERROR: Message: invalid selector: Unable to locate an element with the xpath expression //div[contains(@class,'ult-layout-sider')]/ul/li[5]1 because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//div[contains(@class,'ult-layout-sider')]/ul/li[5]1' is not a valid XPath expression.
+  (Session info: chrome=66.0.3359.139)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.16299 x86_64)
+Traceback (most recent call last):
+  File "D:\Code\PythonSelenium\Driver\FindElement.py", line 45, in find_element
+    element = self.driver.find_element_by_xpath(locator_str)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 368, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 858, in find_element
+    'value': value})['value']
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 311, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //div[contains(@class,'ult-layout-sider')]/ul/li[5]1 because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//div[contains(@class,'ult-layout-sider')]/ul/li[5]1' is not a valid XPath expression.
+  (Session info: chrome=66.0.3359.139)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.16299 x86_64)
+
+'Wed, 30 May 2018 17:13:55' test INFO: D:\Code\PythonSelenium\Screenshot\NETWORK.png
+'Wed, 30 May 2018 17:13:55' test ERROR: [Fail] Unable to click the NETWORK
+'Wed, 30 May 2018 17:13:55' test ERROR: 'NoneType' object has no attribute 'click'
+Traceback (most recent call last):
+  File "D:\Code\PythonSelenium\Driver\ElementUtils.py", line 34, in click
+    self.find_element(locator).click()
+AttributeError: 'NoneType' object has no attribute 'click'
+'Wed, 30 May 2018 17:13:55' test INFO: Logout
+'Wed, 30 May 2018 17:13:57' test INFO: [Successful] Find the element
+'Wed, 30 May 2018 17:13:57' test INFO: [Successful] Click the USER NAVIGATION
+'Wed, 30 May 2018 17:13:58' test INFO: [Successful] Find the element
+'Wed, 30 May 2018 17:13:59' test INFO: [Successful] Click the LOGOUT
+'Wed, 30 May 2018 17:14:02' test INFO: [Successful] Quit the app

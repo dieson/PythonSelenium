@@ -1,0 +1,9 @@
+
+*.pyc
+*.project
+*.pydevproject
+.settings/
+.idea/
+Report/*
+.DS_Store
+Screenshot/
