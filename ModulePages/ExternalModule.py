@@ -4,6 +4,7 @@
 # @File    : ExternalModule.py
 import os
 from Utils.PropertyUtils import PropertyUtils
+from Utils.Utils import Utils
 
 
 class ExternalModule(object):
@@ -22,6 +23,8 @@ class ExternalModule(object):
     __subnetSegment = __EXTERNAL.get("SUBNETSEGMENT")
     __submitSubnet = __EXTERNAL.get("SUBMITSUBNET")
     __submitButton = __EXTERNAL.get("SUBMITBUTTON")
+    __externalName = __EXTERNAL.get("EXTERNALNAME")
+    __subnetWorkName = __EXTERNAL.get("SUBNETWORKNAME")
 
     def __init__(self, driver_utils):
         self.driver = driver_utils
@@ -37,3 +40,11 @@ class ExternalModule(object):
         self.driver.input(self.__subnetSegment, data["subnet_segment"], "SUBNETSEGMENT")
         self.driver.click(self.__submitSubnet, "SUBMITSUBNET")
         self.driver.click(self.__submitButton, "SUBMITBUTTON")
+
+        self.driver.wait(1)
+        external_names = self.driver.get_elements_text(self.__externalName, "EXTERNALNAME")
+        subnet_work_names = self.driver.get_elements_text(self.__subnetWorkName, "SUBNETWORKNAME")
+
+        Utils.assert_str_in_list(data["name"], external_names)
+        Utils.assert_str_in_list(data["subnet_name"], subnet_work_names)
+        Utils.assert_str_in_list(data["subnet_segment"], subnet_work_names)

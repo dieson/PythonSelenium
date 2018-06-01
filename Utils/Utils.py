@@ -71,3 +71,24 @@ class Utils(object):
         cf = cparser.ConfigParser()
         cf.read(file_path)
         return cf
+
+    @staticmethod
+    def assert_str_in_list(st, li):
+        assert st in li
+
+    @staticmethod
+    def assert_list_contains_str(st, li):
+        val = False
+        for str in li:
+            if st in str:
+                val = True
+                break
+        assert val
+
+    @staticmethod
+    def assert_str_contains_str(str_a, str_b):
+        assert str_a in str_b
+
+    @staticmethod
+    def assert_str_equal_str(str_a, str_b):
+        assert str_a == str_b

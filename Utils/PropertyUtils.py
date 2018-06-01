@@ -15,7 +15,7 @@ class PropertyUtils(object):
             for line in fopen:
                 line = line.strip()
                 if line.find('=') > 0 and not line.startswith('#'):
-                    strs = line.split('=')
+                    strs = line.split('=', 1)
                     self.properties[strs[0].strip()] = strs[1].strip()
         except Exception as e:
             raise e

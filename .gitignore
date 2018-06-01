@@ -6,5 +6,5 @@
 .idea/
 Report/*
 .DS_Store
-Screenshot/
+Screenshot/*
 Resources/logger.log

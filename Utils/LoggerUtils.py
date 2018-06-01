@@ -10,6 +10,13 @@ from Utils import Utils
 
 class LoggerUtils(object):
     def __init__(self):
+        logger_path = os.path.join(Utils.get_project_path(), "Resources", "logger.log")
+        if os.path.exists(logger_path):
+            logger_file = open(logger_path, 'w')
+            logger_file.close()
+        else:
+            logger_path.truncate()
+
         filepath = os.path.join(Utils.get_project_path(), "Resources", "logging.conf")
         logging.config.fileConfig(filepath)
         self.logger = logging.getLogger("test")

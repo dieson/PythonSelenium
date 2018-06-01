@@ -15,19 +15,19 @@ class FindElement(DriverUtils):
 
         try:
             if locator_type == "XPATH":
-                elements = self.driver.find_element_by_xpath(locator_str)
+                elements = self.driver.find_elements_by_xpath(locator_str)
             elif locator_type == "ID":
-                elements = self.driver.find_element_by_id(locator_str)
+                elements = self.driver.find_elements_by_id(locator_str)
             elif locator_type == "CLASS":
-                elements = self.driver.find_element_by_class_name(locator_str)
+                elements = self.driver.find_elements_by_class_name(locator_str)
             elif locator_type == "TAGNAME":
-                elements = self.driver.find_element_by_tag_name(locator_str)
+                elements = self.driver.find_elements_by_tag_name(locator_str)
             elif locator_type == "LINKTEXT":
-                elements = self.driver.find_element_by_link_text(locator_str)
+                elements = self.driver.find_elements_by_link_text(locator_str)
             elif locator_type == "NAME":
-                elements = self.driver.find_element_by_name(locator_str)
+                elements = self.driver.find_elements_by_name(locator_str)
             elif locator_type == "CSS":
-                elements = self.driver.find_element_by_css_selector(locator_str)
+                elements = self.driver.find_elements_by_css_selector(locator_str)
             self.logger.log_successful("Find the elements")
         except Exception as e:
             self.logger.log_error("Unable get the elements")
