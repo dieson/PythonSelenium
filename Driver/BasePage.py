@@ -42,3 +42,12 @@ class BasePage(ElementUtils):
         if self.exist_element("NAME:noNotify"):
             self.click("CSS:.ult-checkbox-inner.ult-checkbox-type", "NO NOTIFY")
             self.click("XPATH://div[contains(@class, 'ult-ui-dialog')]/div[2]/div/button[1]", "CLOSE")
+
+    def modify_status(self, locator, element_name, status):
+        attribute = self.get_attribute(locator, element_name, "class")
+        if "ult-switch-checked" in attribute:
+            if status is False or status == "false" or status == "False" or status == "FALSE" or status == "否":
+                self.click(locator, element_name)
+        else:
+            if status is True or status == "true" or status == "True" or status == "TRUE" or status == "是":
+                self.click(locator, element_name)

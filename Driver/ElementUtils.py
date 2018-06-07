@@ -9,7 +9,7 @@ class ElementUtils(FindElement):
     def input(self, locator, value, element_name):
         element = self.find_element(locator)
         try:
-            # element.clear()
+            element.clear()
             element.send_keys(value)
             self.logger.log_successful(element_name + " input:" + value)
         except Exception as e:
@@ -50,11 +50,17 @@ class ElementUtils(FindElement):
             self.logger.log_exception(e)
             assert False
 
-    def get_text(self, locator, element_name):
+    def get_text(self, element_name, locator=None, element=None):
         msg = None
         try:
-            msg = self.find_element(locator).text
-            self.logger.log_successful("Get the " + element_name + " [" + msg + "]")
+            if element is None and locator is not None:
+                msg = self.find_element(locator).text
+            elif locator is None and element is not None:
+                msg = element.text
+            elif locator is not None and element is not None:
+                e = self.find_element_by_element(element, locator)
+                msg = e.text
+            self.logger.log_successful("Get the " + element_name + " '" + msg + "'")
         except Exception as e:
             self.screenshot(element_name)
             self.logger.log_error("Get attribute failure ")
@@ -108,3 +114,17 @@ class ElementUtils(FindElement):
             self.screenshot(element_name)
             self.logger.log_error(element_name + "is existed ")
             self.logger.log_exception(e)
+
+    def get_attribute(self, locator, element_name, attribute):
+        element = self.find_element(locator)
+        msg = None
+
+        try:
+            msg = element.get_attribute(attribute)
+            self.logger.log_successful(element_name + " attribute:" + msg)
+        except Exception as e:
+            self.screenshot(element_name)
+            self.logger.log_error("Unable to get attribute")
+            self.logger.log_exception(e)
+            assert False
+        return msg

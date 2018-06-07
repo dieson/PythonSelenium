@@ -77,6 +77,10 @@ class Utils(object):
         assert st in li
 
     @staticmethod
+    def assert_str_not_in_list(st, li):
+        assert st not in li
+
+    @staticmethod
     def assert_list_contains_str(st, li):
         val = False
         for str in li:

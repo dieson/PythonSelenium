@@ -61,6 +61,33 @@ class FindElement(DriverUtils):
             self.logger.log_exception(e)
         return element
 
+    def find_element_by_element(self, element, locator):
+        self.wait(self.wait_time)
+        locator_type = Utils.get_locator_type(locator)
+        locator_str = Utils.get_locator_str(locator)
+        e = None
+
+        try:
+            if locator_type == "XPATH":
+                e = element.find_element_by_xpath(locator_str)
+            elif locator_type == "ID":
+                e = element.find_element_by_id(locator_str)
+            elif locator_type == "CLASS":
+                e = element.find_element_by_class_name(locator_str)
+            elif locator_type == "TAGNAME":
+                e = element.find_element_by_tag_name(locator_str)
+            elif locator_type == "LINKTEXT":
+                e = element.find_element_by_link_text(locator_str)
+            elif locator_type == "NAME":
+                e = element.find_element_by_name(locator_str)
+            elif locator_type == "CSS":
+                e = element.find_element_by_css_selector(locator_str)
+                self.logger.log_successful("Find the element")
+        except Exception as e:
+            self.logger.log_error("Unable get the element")
+            self.logger.log_exception(e)
+        return e
+
     def exist_element(self, locator):
         self.wait(self.wait_time)
         locator_type = Utils.get_locator_type(locator)

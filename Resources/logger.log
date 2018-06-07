@@ -1,29 +1,54 @@
-'Fri, 01 Jun 2018 13:07:45' test INFO: [Successful] UserName input:admin
-'Fri, 01 Jun 2018 13:07:46' test INFO: [Successful] Password input:passw0rd
-'Fri, 01 Jun 2018 13:07:47' test INFO: [Successful] Find the element
-'Fri, 01 Jun 2018 13:07:47' test INFO: [Successful] Click the LoginButton
-'Fri, 01 Jun 2018 13:07:47' test INFO: Wait for the login successful
-'Fri, 01 Jun 2018 13:07:53' test INFO: [Successful] Switch to window
-'Fri, 01 Jun 2018 13:07:54' test INFO: [Successful] Click the NETWORK
-'Fri, 01 Jun 2018 13:07:55' test INFO: [Successful] Click the EXTERNAL
-'Fri, 01 Jun 2018 13:07:56' test INFO: [Successful] Find the element
-'Fri, 01 Jun 2018 13:07:56' test INFO: [Successful] Click the CREATE
-'Fri, 01 Jun 2018 13:07:58' test INFO: [Successful] NAME input:create_external
-'Fri, 01 Jun 2018 13:07:59' test INFO: [Successful] Find the element
-'Fri, 01 Jun 2018 13:07:59' test INFO: [Successful] Click the ADDSUBNET
-'Fri, 01 Jun 2018 13:08:00' test INFO: [Successful] SUBNETNAME input:test
-'Fri, 01 Jun 2018 13:08:01' test INFO: [Successful] SUBNETSEGMENT input:192.168.0.0/20
-'Fri, 01 Jun 2018 13:08:02' test INFO: [Successful] Find the element
-'Fri, 01 Jun 2018 13:08:02' test INFO: [Successful] Click the SUBMITSUBNET
-'Fri, 01 Jun 2018 13:08:03' test INFO: [Successful] Find the element
-'Fri, 01 Jun 2018 13:08:03' test INFO: [Successful] Click the SUBMITBUTTON
-'Fri, 01 Jun 2018 13:08:05' test INFO: [Successful] Find the elements
-'Fri, 01 Jun 2018 13:08:05' test INFO: [Successful] Get the EXTERNALNAME [u'create_external']
-'Fri, 01 Jun 2018 13:08:07' test INFO: [Successful] Find the elements
-'Fri, 01 Jun 2018 13:08:07' test INFO: [Successful] Get the SUBNETWORKNAME [u'test\uff1a192.168.0.0/20']
-'Fri, 01 Jun 2018 13:08:07' test INFO: Logout
-'Fri, 01 Jun 2018 13:08:09' test INFO: [Successful] Find the element
-'Fri, 01 Jun 2018 13:08:09' test INFO: [Successful] Click the USER NAVIGATION
-'Fri, 01 Jun 2018 13:08:10' test INFO: [Successful] Find the element
-'Fri, 01 Jun 2018 13:08:10' test INFO: [Successful] Click the LOGOUT
-'Fri, 01 Jun 2018 13:08:14' test INFO: [Successful] Quit the app
+'Thu, 07 Jun 2018 10:01:31' test INFO: [Successful] UserName input:admin
+'Thu, 07 Jun 2018 10:01:34' test INFO: [Successful] Password input:passw0rd
+'Thu, 07 Jun 2018 10:01:37' test INFO: [Successful] Find the element
+'Thu, 07 Jun 2018 10:01:37' test INFO: [Successful] Click the LoginButton
+'Thu, 07 Jun 2018 10:01:37' test INFO: Wait for the login successful
+'Thu, 07 Jun 2018 10:01:40' test INFO: [Successful] Switch to window
+'Thu, 07 Jun 2018 10:01:43' test INFO: [Successful] Click the NETWORK
+'Thu, 07 Jun 2018 10:01:46' test INFO: [Successful] Click the EXTERNAL
+'Thu, 07 Jun 2018 10:01:49' test INFO: [Successful] Find the element
+'Thu, 07 Jun 2018 10:01:50' test INFO: [Successful] Click the CREATE
+'Thu, 07 Jun 2018 10:01:54' test INFO: [Successful] NAME input:create_external
+'Thu, 07 Jun 2018 10:01:57' test INFO: [Successful] Find the element
+'Thu, 07 Jun 2018 10:01:57' test INFO: [Successful] Click the ADDSUBNET
+'Thu, 07 Jun 2018 10:02:00' test INFO: [Successful] SUBNETNAME input:test
+'Thu, 07 Jun 2018 10:02:04' test INFO: [Successful] SUBNETSEGMENT input:192.168.0.0/20
+'Thu, 07 Jun 2018 10:02:07' test INFO: [Successful] Find the element
+'Thu, 07 Jun 2018 10:02:07' test INFO: [Successful] Click the SUBMITSUBNET
+'Thu, 07 Jun 2018 10:02:10' test INFO: [Successful] Find the element
+'Thu, 07 Jun 2018 10:02:10' test INFO: [Successful] Click the SUBMITBUTTON
+'Thu, 07 Jun 2018 10:02:14' test INFO: [Successful] Find the elements
+'Thu, 07 Jun 2018 10:02:14' test INFO: [Successful] Get the EXTERNALNAME []
+'Thu, 07 Jun 2018 10:02:17' test INFO: [Successful] Find the elements
+'Thu, 07 Jun 2018 10:02:17' test INFO: [Successful] Get the SUBNETWORKNAME [u'test\uff1a192.168.0.0/20']
+'Thu, 07 Jun 2018 10:02:20' test INFO: [Successful] Click the EXTERNALLINK
+'Thu, 07 Jun 2018 10:02:23' test INFO: [Successful] Find the element
+'Thu, 07 Jun 2018 10:02:23' test INFO: [Successful] Click the MODIFYNETWORKNAMEBUTTON
+'Thu, 07 Jun 2018 10:02:26' test INFO: [Successful] Find the element
+'Thu, 07 Jun 2018 10:02:26' test INFO: [Successful] MODIFYNETWORKNAME input:modify_external
+'Thu, 07 Jun 2018 10:02:29' test INFO: [Successful] Find the element
+'Thu, 07 Jun 2018 10:02:29' test INFO: [Successful] Click the SUBMITMODIFYNETWORK
+'Thu, 07 Jun 2018 10:02:32' test INFO: [Successful] Find the element
+'Thu, 07 Jun 2018 10:02:32' test INFO: [Successful] SHARED attribute:ult-switch ult-switch-small ult-switch-checked
+'Thu, 07 Jun 2018 10:02:35' test INFO: [Successful] ENABLE attribute:ult-switch ult-switch-small ult-switch-checked
+'Thu, 07 Jun 2018 10:02:38' test INFO: [Successful] Click the EXTERNAL
+'Thu, 07 Jun 2018 10:02:41' test INFO: [Successful] Find the elements
+'Thu, 07 Jun 2018 10:02:41' test INFO: [Successful] Get the EXTERNALNAME [u'modify_external']
+'Thu, 07 Jun 2018 10:02:44' test INFO: [Successful] Find the elements
+'Thu, 07 Jun 2018 10:02:47' test INFO: [Successful] Get the EXTERNALNAME 'modify_external'
+'Thu, 07 Jun 2018 10:02:50' test INFO: [Successful] Get the SHAREDTD 'ÊÇ'
+'Thu, 07 Jun 2018 10:02:53' test INFO: [Successful] Get the ENABLEDTD 'ÊÇ'
+'Thu, 07 Jun 2018 10:02:57' test INFO: [Successful] Click the INFO
+'Thu, 07 Jun 2018 10:03:00' test INFO: [Successful] Click the DELETESUBNET
+'Thu, 07 Jun 2018 10:03:03' test INFO: [Successful] Click the SUBMITDELETE
+'Thu, 07 Jun 2018 10:03:06' test INFO: [Successful] Click the EXTERNAL
+'Thu, 07 Jun 2018 10:03:09' test INFO: [Successful] Click the DELETEEXTERNAL
+'Thu, 07 Jun 2018 10:03:12' test INFO: [Successful] Click the SUBMITDELETE
+'Thu, 07 Jun 2018 10:03:15' test INFO: [Successful] Find the elements
+'Thu, 07 Jun 2018 10:03:15' test INFO: [Successful] Get the EXTERNALNAME []
+'Thu, 07 Jun 2018 10:03:15' test INFO: Logout
+'Thu, 07 Jun 2018 10:03:21' test INFO: [Successful] Find the element
+'Thu, 07 Jun 2018 10:03:21' test INFO: [Successful] Click the USER NAVIGATION
+'Thu, 07 Jun 2018 10:03:24' test INFO: [Successful] Find the element
+'Thu, 07 Jun 2018 10:03:26' test INFO: [Successful] Click the LOGOUT
+'Thu, 07 Jun 2018 10:03:29' test INFO: [Successful] Quit the app
