@@ -3,11 +3,12 @@
 # @Author  : Zuo Ran
 # @File    : ExternalModule.py
 import os
+from BasePage import BasePage
 from Utils.PropertyUtils import PropertyUtils
 from Utils.Utils import Utils
 
 
-class ExternalModule(object):
+class ExternalModule(BasePage):
     __EXTERNAL = PropertyUtils(os.path.join("InspectPages", "ExternalPage.ini"))
 
     __network = __EXTERNAL.get("NETWORK")
@@ -36,40 +37,36 @@ class ExternalModule(object):
     __delete = __EXTERNAL.get("DELETE")
     __submitDelete = __EXTERNAL.get("SUBMITDELETE")
 
-    def __init__(self, driver_utils):
-        self.driver = driver_utils
-
     def create_external_network(self, data):
-        self.driver.click(self.__network, "NETWORK")
-        self.driver.click(self.__external, "EXTERNAL")
-        self.driver.click(self.__create, "CREATE")
+        self.driver.click("NETWORK", locator=self.__network)
+        self.driver.click("EXTERNAL", locator=self.__external)
+        self.driver.click("CREATE", locator=self.__create)
         self.driver.wait(1)
-        self.driver.input(self.__name, data["name"], "NAME")
-        # self.driver.is_checked(self.__share, data["share"], "SHARE")
-        self.driver.click(self.__addSubnet, "ADDSUBNET")
-        self.driver.input(self.__subnetName, data["subnet_name"], "SUBNETNAME")
-        self.driver.input(self.__subnetSegment, data["subnet_segment"], "SUBNETSEGMENT")
-        self.driver.click(self.__submitSubnet, "SUBMITSUBNET")
-        self.driver.click(self.__submitButton, "SUBMITBUTTON")
+        self.driver.input("NAME", data["name"], locator=self.__name)
+        self.driver.click("ADDSUBNET", locator=self.__addSubnet)
+        self.driver.input("SUBNETNAME", data["subnet_name"], locator=self.__subnetName)
+        self.driver.input("SUBNETSEGMENT", data["subnet_segment"], locator=self.__subnetSegment)
+        self.driver.click("SUBMITSUBNET", locator=self.__submitSubnet)
+        self.driver.click("SUBMITBUTTON", locator=self.__submitButton)
 
         self.driver.wait(1)
-        external_names = self.driver.get_elements_text(self.__externalName, "EXTERNALNAME")
-        subnet_work_names = self.driver.get_elements_text(self.__subnetWorkName, "SUBNETWORKNAME")
+        external_names = self.driver.get_elements_text("EXTERNALNAME", locator=self.__externalName)
+        subnet_work_names = self.driver.get_elements_text("SUBNETWORKNAME", locator=self.__subnetWorkName)
 
         Utils.assert_str_in_list(data["name"], external_names)
         Utils.assert_list_contains_str(data["subnet_name"], subnet_work_names)
         Utils.assert_list_contains_str(data["subnet_segment"], subnet_work_names)
 
     def modify_external_network(self, data):
-        self.driver.click("LINKTEXT:" + data["name"], "EXTERNALLINK")
-        self.driver.click(self.__modifyNetworkNameButton, "MODIFYNETWORKNAMEBUTTON")
-        self.driver.input(self.__modifyNetworkName, data["name_modify"], "MODIFYNETWORKNAME")
-        self.driver.click(self.__submitModifyNetworkName, "SUBMITMODIFYNETWORK")
-        self.driver.modify_status(self.__share, "SHARED", data["share_modify"])
+        self.driver.click("EXTERNALLINK", locator="LINKTEXT:" + data["name"])
+        self.driver.click("MODIFYNETWORKNAMEBUTTON", locator=self.__modifyNetworkNameButton)
+        self.driver.input("MODIFYNETWORKNAME", data["name_modify"], locator=self.__modifyNetworkName)
+        self.driver.click("SUBMITMODIFYNETWORK", locaotr=self.__submitModifyNetworkName, )
+        self.driver.modify_status(self.__shared, "SHARED", data["share_modify"])
         self.driver.modify_status(self.__enabled, "ENABLE", data["enable_modify"])
-        self.driver.click(self.__external, "EXTERNAL")
+        self.driver.click("EXTERNAL", locator=self.__external)
 
-        external_names = self.driver.get_elements_text(self.__externalName, "EXTERNALNAME")
+        external_names = self.driver.get_elements_text("EXTERNALNAME", locator=self.__externalName)
         Utils.assert_str_in_list(data["name_modify"], external_names)
 
         networks = self.driver.find_elements(self.__networkTable)
@@ -85,12 +82,12 @@ class ExternalModule(object):
                 break
 
     def delete_external_network(self, data):
-        self.driver.click("LINKTEXT:" + data["name_modify"], "INFO")
-        self.driver.click(self.__delete, "DELETESUBNET")
-        self.driver.click(self.__submitDelete, "SUBMITDELETE")
-        self.driver.click(self.__external, "EXTERNAL")
-        self.driver.click(self.__delete, "DELETEEXTERNAL")
-        self.driver.click(self.__submitDelete, "SUBMITDELETE")
+        self.driver.click("INFO", locator="LINKTEXT:" + data["name_modify"])
+        self.driver.click("DELETESUBNET", locaotr=self.__delete)
+        self.driver.click("SUBMITDELETE", locator=self.__submitDelete)
+        self.driver.click("EXTERNAL", locator=self.__external)
+        self.driver.click("DELETEEXTERNAL", locaotr=self.__delete)
+        self.driver.click("SUBMITDELETE", locator=self.__submitDelete)
 
-        external_names = self.driver.get_elements_text(self.__externalName, "EXTERNALNAME")
+        external_names = self.driver.get_elements_text("EXTERNALNAME", locator=self.__externalName)
         Utils.assert_str_not_in_list(data["name_modify"], external_names)

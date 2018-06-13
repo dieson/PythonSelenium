@@ -6,11 +6,19 @@ from FindElement import FindElement
 
 
 class ElementUtils(FindElement):
-    def input(self, locator, value, element_name):
-        element = self.find_element(locator)
+    def input(self, element_name, value, locator=None, element=None):
         try:
-            element.clear()
-            element.send_keys(value)
+            if element is None and locator is not None:
+                element = self.find_element(locator)
+                element.clear()
+                element.send_keys(value)
+            elif locator is None and element is not None:
+                element.clear()
+                element.send_keys(value)
+            elif locator is not None and element is not None:
+                element = self.find_element_by_element(element, locator)
+                element.clear()
+                element.send_keys(value)
             self.logger.log_successful(element_name + " input:" + value)
         except Exception as e:
             self.screenshot(element_name)
@@ -18,10 +26,14 @@ class ElementUtils(FindElement):
             self.logger.log_exception(e)
             assert False
 
-    def clear(self, locator, element_name):
-        element = self.find_element(locator)
+    def clear(self, element_name, locator=None, element=None):
         try:
-            element.clear()
+            if element is None and locator is not None:
+                self.find_element(locator).clear()
+            elif locator is None and element is not None:
+                element.clear()
+            elif locator is not None and element is not None:
+                self.find_element_by_element(element, locator).clear()
             self.logger.log_successful("Clear the " + element_name)
         except Exception as e:
             self.screenshot(element_name)
@@ -29,9 +41,14 @@ class ElementUtils(FindElement):
             self.logger.log_exception(e)
             assert False
 
-    def click(self, locator, element_name):
+    def click(self, element_name, locator=None, element=None):
         try:
-            self.find_element(locator).click()
+            if element is None and locator is not None:
+                self.find_element(locator).click()
+            elif locator is None and element is not None:
+                element.click()
+            elif locator is not None and element is not None:
+                self.find_element_by_element(element, locator).click()
             self.logger.log_successful("Click the " + element_name)
         except Exception as e:
             self.screenshot(element_name)
@@ -68,13 +85,16 @@ class ElementUtils(FindElement):
             assert False
         return msg
 
-    def get_elements_text(self, locator, elements_name):
+    def get_elements_text(self,  elements_name, locator=None, element=None):
         msg = []
         try:
-            elements = self.find_elements(locator)
-            for element in elements:
-                msg.append(element.text)
-
+            if element is None and locator is not None:
+                elements = self.find_elements(locator)
+                for element in elements:
+                    msg.append(element.text)
+            elif locator is None and element is not None:
+                for el in element:
+                    msg.append(el.text)
             self.logger.log_successful("Get the " + elements_name + " " + str(msg))
         except Exception as e:
             self.screenshot(elements_name)

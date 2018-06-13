@@ -1,54 +1,70 @@
-'Thu, 07 Jun 2018 10:01:31' test INFO: [Successful] UserName input:admin
-'Thu, 07 Jun 2018 10:01:34' test INFO: [Successful] Password input:passw0rd
-'Thu, 07 Jun 2018 10:01:37' test INFO: [Successful] Find the element
-'Thu, 07 Jun 2018 10:01:37' test INFO: [Successful] Click the LoginButton
-'Thu, 07 Jun 2018 10:01:37' test INFO: Wait for the login successful
-'Thu, 07 Jun 2018 10:01:40' test INFO: [Successful] Switch to window
-'Thu, 07 Jun 2018 10:01:43' test INFO: [Successful] Click the NETWORK
-'Thu, 07 Jun 2018 10:01:46' test INFO: [Successful] Click the EXTERNAL
-'Thu, 07 Jun 2018 10:01:49' test INFO: [Successful] Find the element
-'Thu, 07 Jun 2018 10:01:50' test INFO: [Successful] Click the CREATE
-'Thu, 07 Jun 2018 10:01:54' test INFO: [Successful] NAME input:create_external
-'Thu, 07 Jun 2018 10:01:57' test INFO: [Successful] Find the element
-'Thu, 07 Jun 2018 10:01:57' test INFO: [Successful] Click the ADDSUBNET
-'Thu, 07 Jun 2018 10:02:00' test INFO: [Successful] SUBNETNAME input:test
-'Thu, 07 Jun 2018 10:02:04' test INFO: [Successful] SUBNETSEGMENT input:192.168.0.0/20
-'Thu, 07 Jun 2018 10:02:07' test INFO: [Successful] Find the element
-'Thu, 07 Jun 2018 10:02:07' test INFO: [Successful] Click the SUBMITSUBNET
-'Thu, 07 Jun 2018 10:02:10' test INFO: [Successful] Find the element
-'Thu, 07 Jun 2018 10:02:10' test INFO: [Successful] Click the SUBMITBUTTON
-'Thu, 07 Jun 2018 10:02:14' test INFO: [Successful] Find the elements
-'Thu, 07 Jun 2018 10:02:14' test INFO: [Successful] Get the EXTERNALNAME []
-'Thu, 07 Jun 2018 10:02:17' test INFO: [Successful] Find the elements
-'Thu, 07 Jun 2018 10:02:17' test INFO: [Successful] Get the SUBNETWORKNAME [u'test\uff1a192.168.0.0/20']
-'Thu, 07 Jun 2018 10:02:20' test INFO: [Successful] Click the EXTERNALLINK
-'Thu, 07 Jun 2018 10:02:23' test INFO: [Successful] Find the element
-'Thu, 07 Jun 2018 10:02:23' test INFO: [Successful] Click the MODIFYNETWORKNAMEBUTTON
-'Thu, 07 Jun 2018 10:02:26' test INFO: [Successful] Find the element
-'Thu, 07 Jun 2018 10:02:26' test INFO: [Successful] MODIFYNETWORKNAME input:modify_external
-'Thu, 07 Jun 2018 10:02:29' test INFO: [Successful] Find the element
-'Thu, 07 Jun 2018 10:02:29' test INFO: [Successful] Click the SUBMITMODIFYNETWORK
-'Thu, 07 Jun 2018 10:02:32' test INFO: [Successful] Find the element
-'Thu, 07 Jun 2018 10:02:32' test INFO: [Successful] SHARED attribute:ult-switch ult-switch-small ult-switch-checked
-'Thu, 07 Jun 2018 10:02:35' test INFO: [Successful] ENABLE attribute:ult-switch ult-switch-small ult-switch-checked
-'Thu, 07 Jun 2018 10:02:38' test INFO: [Successful] Click the EXTERNAL
-'Thu, 07 Jun 2018 10:02:41' test INFO: [Successful] Find the elements
-'Thu, 07 Jun 2018 10:02:41' test INFO: [Successful] Get the EXTERNALNAME [u'modify_external']
-'Thu, 07 Jun 2018 10:02:44' test INFO: [Successful] Find the elements
-'Thu, 07 Jun 2018 10:02:47' test INFO: [Successful] Get the EXTERNALNAME 'modify_external'
-'Thu, 07 Jun 2018 10:02:50' test INFO: [Successful] Get the SHAREDTD 'ÊÇ'
-'Thu, 07 Jun 2018 10:02:53' test INFO: [Successful] Get the ENABLEDTD 'ÊÇ'
-'Thu, 07 Jun 2018 10:02:57' test INFO: [Successful] Click the INFO
-'Thu, 07 Jun 2018 10:03:00' test INFO: [Successful] Click the DELETESUBNET
-'Thu, 07 Jun 2018 10:03:03' test INFO: [Successful] Click the SUBMITDELETE
-'Thu, 07 Jun 2018 10:03:06' test INFO: [Successful] Click the EXTERNAL
-'Thu, 07 Jun 2018 10:03:09' test INFO: [Successful] Click the DELETEEXTERNAL
-'Thu, 07 Jun 2018 10:03:12' test INFO: [Successful] Click the SUBMITDELETE
-'Thu, 07 Jun 2018 10:03:15' test INFO: [Successful] Find the elements
-'Thu, 07 Jun 2018 10:03:15' test INFO: [Successful] Get the EXTERNALNAME []
-'Thu, 07 Jun 2018 10:03:15' test INFO: Logout
-'Thu, 07 Jun 2018 10:03:21' test INFO: [Successful] Find the element
-'Thu, 07 Jun 2018 10:03:21' test INFO: [Successful] Click the USER NAVIGATION
-'Thu, 07 Jun 2018 10:03:24' test INFO: [Successful] Find the element
-'Thu, 07 Jun 2018 10:03:26' test INFO: [Successful] Click the LOGOUT
-'Thu, 07 Jun 2018 10:03:29' test INFO: [Successful] Quit the app
+'Fri, 08 Jun 2018 15:59:34' test INFO: [Successful] Find the element
+'Fri, 08 Jun 2018 15:59:34' test INFO: [Successful] UserName input:admin
+'Fri, 08 Jun 2018 15:59:37' test INFO: [Successful] Find the element
+'Fri, 08 Jun 2018 15:59:37' test INFO: [Successful] Password input:passw0rd
+'Fri, 08 Jun 2018 15:59:40' test INFO: [Successful] Find the element
+'Fri, 08 Jun 2018 15:59:40' test INFO: [Successful] Click the LoginButton
+'Fri, 08 Jun 2018 15:59:40' test INFO: Wait for the login successful
+'Fri, 08 Jun 2018 15:59:43' test INFO: [Successful] Switch to window
+'Fri, 08 Jun 2018 15:59:46' test INFO: [Successful] Find the element
+'Fri, 08 Jun 2018 15:59:46' test INFO: [Successful] Click the NETWORK
+'Fri, 08 Jun 2018 15:59:49' test INFO: [Successful] Find the element
+'Fri, 08 Jun 2018 15:59:50' test INFO: [Successful] Click the RIVATE
+'Fri, 08 Jun 2018 15:59:53' test ERROR: [Fail] Unable get the element
+'Fri, 08 Jun 2018 15:59:53' test ERROR: Message: no such element: Unable to locate element: {"method":"link text","selector":"create_private"}
+  (Session info: chrome=66.0.3359.139)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.16299 x86_64)
+Traceback (most recent call last):
+  File "D:\Code\PythonSelenium\Driver\FindElement.py", line 53, in find_element
+    element = self.driver.find_element_by_link_text(locator_str)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 392, in find_element_by_link_text
+    return self.find_element(by=By.LINK_TEXT, value=link_text)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 858, in find_element
+    'value': value})['value']
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 311, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+NoSuchElementException: Message: no such element: Unable to locate element: {"method":"link text","selector":"create_private"}
+  (Session info: chrome=66.0.3359.139)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.16299 x86_64)
+
+'Fri, 08 Jun 2018 15:59:53' test INFO: D:\Code\PythonSelenium\Screenshot\PRIVATELINK.png
+'Fri, 08 Jun 2018 15:59:53' test ERROR: [Fail] Unable to click the PRIVATELINK
+'Fri, 08 Jun 2018 15:59:53' test ERROR: 'NoneType' object has no attribute 'click'
+Traceback (most recent call last):
+  File "D:\Code\PythonSelenium\Driver\ElementUtils.py", line 47, in click
+    self.find_element(locator).click()
+AttributeError: 'NoneType' object has no attribute 'click'
+'Fri, 08 Jun 2018 15:59:56' test ERROR: [Fail] Unable get the element
+'Fri, 08 Jun 2018 15:59:56' test ERROR: Message: no such element: Unable to locate element: {"method":"link text","selector":"create_private"}
+  (Session info: chrome=66.0.3359.139)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.16299 x86_64)
+Traceback (most recent call last):
+  File "D:\Code\PythonSelenium\Driver\FindElement.py", line 53, in find_element
+    element = self.driver.find_element_by_link_text(locator_str)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 392, in find_element_by_link_text
+    return self.find_element(by=By.LINK_TEXT, value=link_text)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 858, in find_element
+    'value': value})['value']
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 311, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+NoSuchElementException: Message: no such element: Unable to locate element: {"method":"link text","selector":"create_private"}
+  (Session info: chrome=66.0.3359.139)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.16299 x86_64)
+
+'Fri, 08 Jun 2018 15:59:56' test INFO: D:\Code\PythonSelenium\Screenshot\INFO.png
+'Fri, 08 Jun 2018 15:59:56' test ERROR: [Fail] Unable to click the INFO
+'Fri, 08 Jun 2018 15:59:56' test ERROR: 'NoneType' object has no attribute 'click'
+Traceback (most recent call last):
+  File "D:\Code\PythonSelenium\Driver\ElementUtils.py", line 47, in click
+    self.find_element(locator).click()
+AttributeError: 'NoneType' object has no attribute 'click'
+'Fri, 08 Jun 2018 15:59:56' test INFO: Logout
+'Fri, 08 Jun 2018 16:00:02' test INFO: [Successful] Find the element
+'Fri, 08 Jun 2018 16:00:03' test INFO: [Successful] Click the USER NAVIGATION
+'Fri, 08 Jun 2018 16:00:06' test INFO: [Successful] Find the element
+'Fri, 08 Jun 2018 16:00:07' test INFO: [Successful] Click the LOGOUT
+'Fri, 08 Jun 2018 16:00:10' test INFO: [Successful] Quit the app

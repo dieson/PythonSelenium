@@ -3,10 +3,12 @@
 # @Author  : Zuo Ran
 # @File    : LoginTest.py
 import unittest
+
 import ddt
-from Utils.ExcelUtils import ExcelUtils
-from Driver.BasePage import BasePage
+
+from ModulePages.BasePage import BasePage
 from ModulePages.LoginModule import LoginModule
+from Utils.ExcelUtils import ExcelUtils
 
 
 @ddt.ddt

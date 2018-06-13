@@ -55,7 +55,7 @@ class FindElement(DriverUtils):
                 element = self.driver.find_element_by_name(locator_str)
             elif locator_type == "CSS":
                 element = self.driver.find_element_by_css_selector(locator_str)
-                self.logger.log_successful("Find the element")
+            self.logger.log_successful("Find the element")
         except Exception as e:
             self.logger.log_error("Unable get the element")
             self.logger.log_exception(e)
