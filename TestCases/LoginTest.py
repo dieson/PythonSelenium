@@ -6,9 +6,9 @@ import unittest
 
 import ddt
 
-from ModulePages.BasePage import BasePage
 from ModulePages.LoginModule import LoginModule
 from Utils.ExcelUtils import ExcelUtils
+from Driver.ElementUtils import ElementUtils
 
 
 @ddt.ddt
@@ -19,7 +19,7 @@ class LoginTest(unittest.TestCase):
 
     @classmethod
     def setUp(cls):
-        cls.driver = BasePage()
+        cls.driver = ElementUtils()
         cls.login = LoginModule(cls.driver)
 
     @ddt.data(*excel.next())

@@ -1,70 +1,164 @@
-'Fri, 08 Jun 2018 15:59:34' test INFO: [Successful] Find the element
-'Fri, 08 Jun 2018 15:59:34' test INFO: [Successful] UserName input:admin
-'Fri, 08 Jun 2018 15:59:37' test INFO: [Successful] Find the element
-'Fri, 08 Jun 2018 15:59:37' test INFO: [Successful] Password input:passw0rd
-'Fri, 08 Jun 2018 15:59:40' test INFO: [Successful] Find the element
-'Fri, 08 Jun 2018 15:59:40' test INFO: [Successful] Click the LoginButton
-'Fri, 08 Jun 2018 15:59:40' test INFO: Wait for the login successful
-'Fri, 08 Jun 2018 15:59:43' test INFO: [Successful] Switch to window
-'Fri, 08 Jun 2018 15:59:46' test INFO: [Successful] Find the element
-'Fri, 08 Jun 2018 15:59:46' test INFO: [Successful] Click the NETWORK
-'Fri, 08 Jun 2018 15:59:49' test INFO: [Successful] Find the element
-'Fri, 08 Jun 2018 15:59:50' test INFO: [Successful] Click the RIVATE
-'Fri, 08 Jun 2018 15:59:53' test ERROR: [Fail] Unable get the element
-'Fri, 08 Jun 2018 15:59:53' test ERROR: Message: no such element: Unable to locate element: {"method":"link text","selector":"create_private"}
-  (Session info: chrome=66.0.3359.139)
+'Mon, 16 Jul 2018 17:04:18' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:04:19' test INFO: [Successful] UserName input:admin
+'Mon, 16 Jul 2018 17:04:22' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:04:22' test INFO: [Successful] Password input:passw0rd
+'Mon, 16 Jul 2018 17:04:25' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:04:25' test INFO: [Successful] Click the LoginButton
+'Mon, 16 Jul 2018 17:04:25' test INFO: Wait for the login successful
+'Mon, 16 Jul 2018 17:04:28' test INFO: [Successful] Switch to window
+'Mon, 16 Jul 2018 17:04:31' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:04:31' test INFO: [Successful] Click the ENTERPRISE
+'Mon, 16 Jul 2018 17:04:35' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:04:35' test INFO: [Successful] Click the CREATE
+'Mon, 16 Jul 2018 17:04:38' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:04:38' test INFO: [Successful] NAME input:ui_project
+'Mon, 16 Jul 2018 17:04:41' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:04:41' test INFO: [Successful] DESCRIPTION input:test
+'Mon, 16 Jul 2018 17:04:44' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:04:44' test INFO: [Successful] Click the OKBUTTON
+'Mon, 16 Jul 2018 17:04:47' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:04:47' test INFO: [Successful] Click the HOME
+'Mon, 16 Jul 2018 17:04:50' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:04:50' test INFO: [Successful] Click the VOLUME
+'Mon, 16 Jul 2018 17:04:53' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:04:53' test INFO: [Successful] Click the CREATE
+'Mon, 16 Jul 2018 17:04:56' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:04:57' test INFO: [Successful] Click the PROJECT
+'Mon, 16 Jul 2018 17:05:00' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:05:00' test INFO: [Successful] Click the PROJECT
+'Mon, 16 Jul 2018 17:05:03' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:05:03' test INFO: [Successful] Click the DATADISK
+'Mon, 16 Jul 2018 17:05:06' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:05:06' test INFO: [Successful] NAME input:ui_volume
+'Mon, 16 Jul 2018 17:05:09' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:05:09' test INFO: [Successful] Click the TYPE
+'Mon, 16 Jul 2018 17:05:12' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:05:12' test INFO: [Successful] Click the TYPE
+'Mon, 16 Jul 2018 17:05:15' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:05:15' test INFO: [Successful] Clear the CAPACITY
+'Mon, 16 Jul 2018 17:05:18' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:05:18' test INFO: [Successful] CAPACITY input:2
+'Mon, 16 Jul 2018 17:05:21' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:05:21' test INFO: [Successful] Clear the NUMBER
+'Mon, 16 Jul 2018 17:05:24' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:05:24' test INFO: [Successful] NUMBER input:1
+'Mon, 16 Jul 2018 17:05:27' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:05:27' test INFO: [Successful] SHAREDVOLUME attribute:ult-checkbox ult-checkbox-inline
+'Mon, 16 Jul 2018 17:05:30' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:05:30' test INFO: [Successful] DESCRIPTION input:test
+'Mon, 16 Jul 2018 17:05:33' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:05:33' test INFO: [Successful] Click the OKBUTTON
+'Mon, 16 Jul 2018 17:05:36' test INFO: [Successful] Find the elements
+'Mon, 16 Jul 2018 17:05:39' test INFO: [Successful] Get the NAMETD 'ui_volume'
+'Mon, 16 Jul 2018 17:05:42' test INFO: [Successful] Get the PROJECTTD 'ui_project'
+'Mon, 16 Jul 2018 17:05:45' test INFO: [Successful] Get the TYPETD '容量型'
+'Mon, 16 Jul 2018 17:05:48' test INFO: [Successful] Get the CAPACITYTD '2'
+'Mon, 16 Jul 2018 17:05:51' test INFO: [Successful] Get the CAPABILITYTD '数据盘'
+'Mon, 16 Jul 2018 17:05:54' test INFO: [Successful] Get the STATETD '可用'
+'Mon, 16 Jul 2018 17:05:58' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:05:58' test INFO: [Successful] Click the NAMETD
+'Mon, 16 Jul 2018 17:06:01' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:06:01' test INFO: [Successful] Get the PROJECTINFO 'ui_project'
+'Mon, 16 Jul 2018 17:06:04' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:06:04' test INFO: [Successful] Get the NAMEINFO 'ui_volume'
+'Mon, 16 Jul 2018 17:06:07' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:06:07' test INFO: [Successful] Get the STATEINFO '可用'
+'Mon, 16 Jul 2018 17:06:10' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:06:10' test INFO: [Successful] Get the CAPABILITYINFO '数据盘'
+'Mon, 16 Jul 2018 17:06:13' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:06:13' test INFO: [Successful] Get the DESCRIPTIONINFO 'test'
+'Mon, 16 Jul 2018 17:06:16' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:06:16' test INFO: [Successful] Get the TYPEINFO '容量型'
+'Mon, 16 Jul 2018 17:06:19' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:06:19' test INFO: [Successful] Click the VOLUME
+'Mon, 16 Jul 2018 17:06:22' test INFO: [Successful] Find the elements
+'Mon, 16 Jul 2018 17:06:25' test INFO: [Successful] Get the NAMETD 'ui_volume'
+'Mon, 16 Jul 2018 17:06:28' test INFO: [Successful] Click the ACTIONS
+'Mon, 16 Jul 2018 17:06:31' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:06:31' test INFO: [Successful] Click the EXPAND
+'Mon, 16 Jul 2018 17:06:34' test INFO: [Successful] Get the NAMEEXPAND 'ui_volume'
+'Mon, 16 Jul 2018 17:06:37' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:06:37' test INFO: [Successful] Clear the CAPACITYEXPAND
+'Mon, 16 Jul 2018 17:06:40' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:06:40' test INFO: [Successful] CAPACITYEXPAND input:3
+'Mon, 16 Jul 2018 17:06:43' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:06:43' test INFO: [Successful] Click the SUBMITDIALOG
+'Mon, 16 Jul 2018 17:06:46' test INFO: [Successful] Find the elements
+'Mon, 16 Jul 2018 17:06:49' test INFO: [Successful] Get the NAMETD 'ui_volume'
+'Mon, 16 Jul 2018 17:06:52' test INFO: [Successful] Get the CAPACITYTD '3'
+'Mon, 16 Jul 2018 17:06:55' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:06:55' test INFO: [Successful] Click the VOLUME
+'Mon, 16 Jul 2018 17:06:58' test INFO: [Successful] Find the elements
+'Mon, 16 Jul 2018 17:07:01' test INFO: [Successful] Get the NAMETD 'ui_volume'
+'Mon, 16 Jul 2018 17:07:05' test INFO: [Successful] Click the ACTIONS
+'Mon, 16 Jul 2018 17:07:08' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:07:08' test INFO: [Successful] Click the SETRW
+'Mon, 16 Jul 2018 17:07:11' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:07:11' test INFO: [Successful] Clear the READIOPSRW
+'Mon, 16 Jul 2018 17:07:14' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:07:14' test INFO: [Successful] READIOPSRW input:100
+'Mon, 16 Jul 2018 17:07:17' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:07:17' test INFO: [Successful] Clear the WRITEIOPSRW
+'Mon, 16 Jul 2018 17:07:20' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:07:20' test INFO: [Successful] WRITEIOPSRW input:100
+'Mon, 16 Jul 2018 17:07:23' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:07:23' test INFO: [Successful] Clear the READTHROUGHPUT
+'Mon, 16 Jul 2018 17:07:26' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:07:26' test INFO: [Successful] READTHROUGHPUT input:10
+'Mon, 16 Jul 2018 17:07:29' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:07:29' test INFO: [Successful] Clear the WRITETHROUGHPUT
+'Mon, 16 Jul 2018 17:07:32' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:07:32' test INFO: [Successful] WRITETHROUGHPUT input:10
+'Mon, 16 Jul 2018 17:07:35' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:07:35' test INFO: [Successful] Click the SUBMITDIALOG
+'Mon, 16 Jul 2018 17:07:38' test INFO: [Successful] Find the elements
+'Mon, 16 Jul 2018 17:07:41' test INFO: [Successful] Get the NAMETD 'ui_volume'
+'Mon, 16 Jul 2018 17:07:44' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:07:44' test INFO: [Successful] Click the NAMETD
+'Mon, 16 Jul 2018 17:07:47' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:07:47' test INFO: [Successful] Get the READIOPSINFO '400'
+'Mon, 16 Jul 2018 17:07:50' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:07:52' test INFO: [Successful] Click the ENTERPRISE
+'Mon, 16 Jul 2018 17:07:55' test INFO: [Successful] Find the element
+'Mon, 16 Jul 2018 17:07:55' test INFO: [Successful] Click the PROJECT
+'Mon, 16 Jul 2018 17:07:59' test INFO: [Successful] Find the elements
+'Mon, 16 Jul 2018 17:08:02' test INFO: [Successful] Find the elements
+'Mon, 16 Jul 2018 17:08:02' test INFO: [Successful] Get the PROJECT 'demo Demo project
+-
+1 是'
+'Mon, 16 Jul 2018 17:08:02' test INFO: [Successful] Get the PROJECT 'ui_project test
+-
+0 是'
+'Mon, 16 Jul 2018 17:08:02' test INFO: [Successful] Get the PROJECT 'zhanglei zhanglei
+-
+0 是'
+'Mon, 16 Jul 2018 17:08:02' test INFO: [Successful] Get the PROJECT 'AAA -
+-
+0 是'
+'Mon, 16 Jul 2018 17:08:05' test INFO: [Successful] PROJECTNAME is not existed
+'Mon, 16 Jul 2018 17:08:08' test ERROR: [Fail] Unable get the element: //*[@id="app"]/div/div[1]/ul/li[9]/a
+'Mon, 16 Jul 2018 17:08:08' test ERROR: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div/div[1]/ul/li[9]/a"}
+  (Session info: chrome=67.0.3396.99)
   (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.16299 x86_64)
 Traceback (most recent call last):
-  File "D:\Code\PythonSelenium\Driver\FindElement.py", line 53, in find_element
-    element = self.driver.find_element_by_link_text(locator_str)
-  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 392, in find_element_by_link_text
-    return self.find_element(by=By.LINK_TEXT, value=link_text)
+  File "D:\Code\ui-auto-test\Driver\FindElement.py", line 45, in find_element
+    element = self.driver.find_element_by_xpath(locator_str)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 368, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
   File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 858, in find_element
     'value': value})['value']
   File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 311, in execute
     self.error_handler.check_response(response)
   File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
     raise exception_class(message, screen, stacktrace)
-NoSuchElementException: Message: no such element: Unable to locate element: {"method":"link text","selector":"create_private"}
-  (Session info: chrome=66.0.3359.139)
+NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div/div[1]/ul/li[9]/a"}
+  (Session info: chrome=67.0.3396.99)
   (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.16299 x86_64)
 
-'Fri, 08 Jun 2018 15:59:53' test INFO: D:\Code\PythonSelenium\Screenshot\PRIVATELINK.png
-'Fri, 08 Jun 2018 15:59:53' test ERROR: [Fail] Unable to click the PRIVATELINK
-'Fri, 08 Jun 2018 15:59:53' test ERROR: 'NoneType' object has no attribute 'click'
+'Mon, 16 Jul 2018 17:08:08' test INFO: D:\Code\ui-auto-test\Screenshot\RECYCLEBIN.png
+'Mon, 16 Jul 2018 17:08:08' test ERROR: [Fail] Unable to click the RECYCLEBIN
+'Mon, 16 Jul 2018 17:08:08' test ERROR: 'NoneType' object has no attribute 'click'
 Traceback (most recent call last):
-  File "D:\Code\PythonSelenium\Driver\ElementUtils.py", line 47, in click
+  File "D:\Code\ui-auto-test\Driver\ElementUtils.py", line 44, in click
     self.find_element(locator).click()
 AttributeError: 'NoneType' object has no attribute 'click'
-'Fri, 08 Jun 2018 15:59:56' test ERROR: [Fail] Unable get the element
-'Fri, 08 Jun 2018 15:59:56' test ERROR: Message: no such element: Unable to locate element: {"method":"link text","selector":"create_private"}
-  (Session info: chrome=66.0.3359.139)
-  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.16299 x86_64)
-Traceback (most recent call last):
-  File "D:\Code\PythonSelenium\Driver\FindElement.py", line 53, in find_element
-    element = self.driver.find_element_by_link_text(locator_str)
-  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 392, in find_element_by_link_text
-    return self.find_element(by=By.LINK_TEXT, value=link_text)
-  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 858, in find_element
-    'value': value})['value']
-  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 311, in execute
-    self.error_handler.check_response(response)
-  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
-    raise exception_class(message, screen, stacktrace)
-NoSuchElementException: Message: no such element: Unable to locate element: {"method":"link text","selector":"create_private"}
-  (Session info: chrome=66.0.3359.139)
-  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.16299 x86_64)
-
-'Fri, 08 Jun 2018 15:59:56' test INFO: D:\Code\PythonSelenium\Screenshot\INFO.png
-'Fri, 08 Jun 2018 15:59:56' test ERROR: [Fail] Unable to click the INFO
-'Fri, 08 Jun 2018 15:59:56' test ERROR: 'NoneType' object has no attribute 'click'
-Traceback (most recent call last):
-  File "D:\Code\PythonSelenium\Driver\ElementUtils.py", line 47, in click
-    self.find_element(locator).click()
-AttributeError: 'NoneType' object has no attribute 'click'
-'Fri, 08 Jun 2018 15:59:56' test INFO: Logout
-'Fri, 08 Jun 2018 16:00:02' test INFO: [Successful] Find the element
-'Fri, 08 Jun 2018 16:00:03' test INFO: [Successful] Click the USER NAVIGATION
-'Fri, 08 Jun 2018 16:00:06' test INFO: [Successful] Find the element
-'Fri, 08 Jun 2018 16:00:07' test INFO: [Successful] Click the LOGOUT
-'Fri, 08 Jun 2018 16:00:10' test INFO: [Successful] Quit the app

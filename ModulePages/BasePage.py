@@ -46,7 +46,7 @@ class BasePage(object):
             self.driver.click("NO NOTIFY", locator="CSS:.ult-checkbox-inner.ult-checkbox-type")
             self.driver.click("CLOSE", locator="XPATH://div[contains(@class, 'ult-ui-dialog')]/div[2]/div/button[1]")
 
-    def modify_status(self, locator, element_name, status):
+    def select_checkbox(self, locator, element_name, status):
         attribute = self.driver.get_attribute(locator, element_name, "class")
         if "ult-switch-checked" in attribute:
             if status is False or status == "false" or status == "False" or status == "FALSE" or status == "否":

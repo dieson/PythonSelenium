@@ -10,14 +10,11 @@ class ElementUtils(FindElement):
         try:
             if element is None and locator is not None:
                 element = self.find_element(locator)
-                element.clear()
                 element.send_keys(value)
             elif locator is None and element is not None:
-                element.clear()
                 element.send_keys(value)
             elif locator is not None and element is not None:
                 element = self.find_element_by_element(element, locator)
-                element.clear()
                 element.send_keys(value)
             self.logger.log_successful(element_name + " input:" + value)
         except Exception as e:
@@ -56,7 +53,7 @@ class ElementUtils(FindElement):
             self.logger.log_exception(e)
             assert False
 
-    def select(self, locator, value, element_name):
+    def select(self, element_name, value, locator=None):
         element = self.find_element(locator)
         try:
             element.select_by_visible_text(value)
@@ -125,15 +122,18 @@ class ElementUtils(FindElement):
             self.logger.log_exception(e)
 
     def is_existed(self, locator, element_name):
+        is_exist = False
         try:
             if self.exist_element(locator):
-                self.logger.log_successful(element_name + "is existed")
+                self.logger.log_successful(element_name + " is existed")
+                is_exist = True
             else:
-                self.logger.log_successful(element_name + "is not existed")
+                self.logger.log_successful(element_name + " is not existed")
         except Exception as e:
             self.screenshot(element_name)
             self.logger.log_error(element_name + "is existed ")
             self.logger.log_exception(e)
+        return is_exist
 
     def get_attribute(self, locator, element_name, attribute):
         element = self.find_element(locator)

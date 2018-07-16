@@ -30,7 +30,7 @@ class FindElement(DriverUtils):
                 elements = self.driver.find_elements_by_css_selector(locator_str)
             self.logger.log_successful("Find the elements")
         except Exception as e:
-            self.logger.log_error("Unable get the elements")
+            self.logger.log_error("Unable get the elements: " + locator_str)
             self.logger.log_exception(e)
         return elements
 
@@ -57,7 +57,7 @@ class FindElement(DriverUtils):
                 element = self.driver.find_element_by_css_selector(locator_str)
             self.logger.log_successful("Find the element")
         except Exception as e:
-            self.logger.log_error("Unable get the element")
+            self.logger.log_error("Unable get the element: " + locator_str)
             self.logger.log_exception(e)
         return element
 
@@ -84,7 +84,7 @@ class FindElement(DriverUtils):
                 e = element.find_element_by_css_selector(locator_str)
                 self.logger.log_successful("Find the element")
         except Exception as e:
-            self.logger.log_error("Unable get the element")
+            self.logger.log_error("Unable get the element: " + locator_str)
             self.logger.log_exception(e)
         return e
 
