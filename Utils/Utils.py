@@ -62,6 +62,15 @@ class Utils(object):
         except Exception as e:
             print e
 
+    @staticmethod
+    def get_conf_list(section, key):
+        st = Utils.get_conf(section, key)
+        try:
+            li = st.strip(',').split(',')
+            return li
+        except Exception as e:
+            print e
+
     # 获取property文件
     @staticmethod
     def get_file(*path):

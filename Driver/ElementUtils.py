@@ -82,7 +82,7 @@ class ElementUtils(FindElement):
             assert False
         return msg
 
-    def get_elements_text(self,  elements_name, locator=None, element=None):
+    def get_elements_text(self, elements_name, locator=None, element=None):
         msg = []
         try:
             if element is None and locator is not None:

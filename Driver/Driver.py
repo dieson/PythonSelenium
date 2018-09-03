@@ -22,6 +22,16 @@ class Driver(object):
         self.driver.maximize_window()
         self.driver.get(self.url)
 
+    def open_url(self, path):
+        url = '%s%s' % (self.url, path)
+        try:
+            self.driver.get(url)
+            self.logger.log_successful("Open the " + url)
+        except Exception as e:
+            self.logger.log_error("Open the " + url)
+            self.logger.log_exception(e)
+            assert False
+
     def quit(self):
         try:
             self.driver.quit()

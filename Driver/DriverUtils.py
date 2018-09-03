@@ -79,3 +79,12 @@ class DriverUtils(Driver):
             self.screenshot("Alert")
             self.logger.log_error("Unable switch to window")
             self.logger.log_exception(e)
+
+    def refresh(self):
+        try:
+            self.driver.refresh()
+            self.logger.log_successful("Refresh page")
+        except Exception as e:
+            self.screenshot("Refresh")
+            self.logger.log_error("Unable refresh page")
+            self.logger.log_exception(e)
