@@ -59,7 +59,7 @@ openpyxl==2.4.9
 ordereddict==1.1
 passlib==1.7.1
 pbr==3.1.1
-Pillow==4.3.0
+Pillow==9.0.1
 pycurl==7.43.0
 pyhessian2==2.0.1
 PyMySQL==0.7.11
